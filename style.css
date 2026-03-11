@@ -1,8 +1,10 @@
 * {
     margin: 0;
     padding: 0;
+}
 
-    box-sizing: border-box;
+body{
+    padding: 20px;
 }
 
 main {
@@ -11,9 +13,23 @@ main {
     flex-direction: row;
 }
 
+div{
+    width: 100%;
+}
+
 form {
+    border-radius: 14px;
+    padding: 20px;
     background-color: aqua;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    gap: 10px;
+}
+
+.input{
+    font-size: 28px;
+}
+
+textarea{
+    font-size: 18px;
 }
