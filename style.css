@@ -19,6 +19,7 @@ main {
 
 div{
     width: 100%;
+    max-width: 70%;
     border-radius: 14px;
     padding: 20px;
     background-color: rgb(35, 35, 35);
@@ -81,6 +82,18 @@ button:hover{
 
 button:active{
     background-color: rgb(0, 84, 127);
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 2px solid white;
+    text-align: center;
+    padding: 10px;
+
+
 }
 
 @media (max-width: 768px) {
