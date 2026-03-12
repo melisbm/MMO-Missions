@@ -1,0 +1,1 @@
+const cityOrigin = document.querySelector('input[name="city-origin"]');

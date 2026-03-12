@@ -9,21 +9,21 @@
 </head>
 
 <body>
-    <h1>Missions MMO</h1>
+    <h1>MMO Missions</h1>
 
     <main>
 
         <div class="addTaskContainer">
             <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input-->
             <form action="submit">
-                <input class="input" type="text" placeholder="Ciutat origen">
-                <input class="input" type="text" placeholder="Ciutat destí">
-                <input class="input" type="number" placeholder="Experiència">
-                <input class="input" type="number" placeholder="Or">
 
-                <input class="input" type="text" placeholder="Persona destí">
+                <input name="city-origin" class="input" type="text" placeholder="Ciutat origen" maxlength="50">
+                <input class="input" type="text" placeholder="Ciutat destí" maxlength="50">
+                <input class="input" type="number" placeholder="Experiència" min="0">
+                <input class="input" type="number" placeholder="Or" min="0">
+                <input class="input" type="text" placeholder="Persona destí" maxlength="50">
 
-                <select multiple>
+                <select>
                     <option>Ganivet</option>
                     <option>Destral</option>
                     <option>Llança</option>
@@ -34,10 +34,12 @@
                     <option>Armadura</option>
                 </select>
 
-                <textarea placeholder="Descripció"></textarea>
-                <input class="input" type="number" placeholder="Nivell mínim">
-                <input class="input" type="date">
+                <textarea placeholder="Descripció" maxlength="250"></textarea>
+                <input class="input" type="number" placeholder="Nivell mínim" min="0">
 
+                <input class="input" name="initial-date" type="date">
+                <input class="input" name="end-date" type="date">
+                <button>Add Mission</button>
             </form>
         </div>
         
