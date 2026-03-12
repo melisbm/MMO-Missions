@@ -84,7 +84,7 @@ button:active{
 }
 
 @media (max-width: 768px) {
-  main{
-    flex-direction: column;
-  }
+    main{
+        flex-direction: column;
+    }
 }
