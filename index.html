@@ -13,40 +13,64 @@
 
     <main>
 
-        <div class="addTaskContainer">
-            <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input-->
-            <form action="submit">
+        <div id="missions-manager">
+            <div id="addTask">
+                <h2>Afegir missió</h2>
+                <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input-->
+                <form action="submit">
 
-                <input name="origin-city" class="input" type="text" placeholder="Ciutat origen" maxlength="50">
-                <input name="destination-city" class="input" type="text" placeholder="Ciutat destí" maxlength="50">
-                <input name="xp" class="input" type="number" placeholder="Experiència" min="0">
-                <input name="gold"class="input" type="number" placeholder="Or" min="0">
-                <input name="destination-person" class="input" type="text" placeholder="Persona destí" maxlength="50">
+                    <input name="origin-city" class="input" type="text" placeholder="Ciutat origen" maxlength="50">
+                    <input name="destination-city" class="input" type="text" placeholder="Ciutat destí" maxlength="50">
+                    <input name="xp" class="input" type="number" placeholder="Experiència" min="0">
+                    <input name="gold"class="input" type="number" placeholder="Or" min="0">
+                    <input name="destination-person" class="input" type="text" placeholder="Persona destí" maxlength="50">
 
-                <select>
-                    <option>Ganivet</option>
-                    <option>Destral</option>
-                    <option>Llança</option>
-                    <option>Espasa</option>
-                    <option>Dagà</option>
-                    <option>Arc</option>
-                    <option>Escut</option>
-                    <option>Armadura</option>
-                </select>
+                    <select>
+                        <option>Ganivet</option>
+                        <option>Destral</option>
+                        <option>Llança</option>
+                        <option>Espasa</option>
+                        <option>Dagà</option>
+                        <option>Arc</option>
+                        <option>Escut</option>
+                        <option>Armadura</option>
+                    </select>
 
-                <input name ="min-level" class="input" type="number" placeholder="Nivell mínim" min="0">
-                <textarea placeholder="Descripció" maxlength="250"></textarea>
+                    <input name ="min-level" class="input" type="number" placeholder="Nivell mínim" min="0">
+                    <textarea placeholder="Descripció" maxlength="250"></textarea>
 
-                <input class="input" name="start-date" type="date">
-                <input class="input" name="end-date" type="date">
+                    <input class="input" name="start-date" type="date">
+                    <input class="input" name="end-date" type="date">
 
-                <button>Afegir missió</button>
+                    <button>Afegir missió</button>
 
-            </form>
+                </form>
+            </div>
+            
+            <div id="pendingTasks">
+                <h2>Missions</h2>
+                <table>
+                    <tr>
+                        <th>Missió</th>
+                        <th>Ciutat Origen</th>
+                        <th>Ciutat destí</th>
+                        <th>Experiència</th>
+                        <th>Or</th>
+                        <th>Persona destí</th>
+                        <th>Objecte</th>
+                        <th>Nivell mínim</th>
+                        <th>Descripció</th>
+                        <th>Data començament</th>
+                        <th>Data fi</th>
+                    </tr>
+                </table>
+                <p>No hi ha missions pendents...</p>
+            </div>
         </div>
         
-        <div>
-            <h2>Missions</h2>
+
+        <div id="completed-missions">
+            <h2>Missions Completades</h2>
             <table>
                 <tr>
                     <th>Missió</th>
@@ -62,7 +86,6 @@
                     <th>Data fi</th>
                 </tr>
             </table>
-            <p>No hi ha missions pendents...</p>
         </div>
     </main>
 

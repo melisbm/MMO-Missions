@@ -13,17 +13,33 @@ body{
 
 main {
     display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#missions-manager{
+    display: flex;
     flex-direction: row;
     gap: 15px;
 }
 
-div{
+#missions-manager div{
     width: 100%;
     max-width: 70%;
     border-radius: 14px;
     padding: 20px;
     background-color: rgb(35, 35, 35);
     height: fit-content;
+}
+
+#completed-missions{
+    width: fit-content;
+    min-width: fit-content;
+    border-radius: 14px;
+    padding: 20px;
+    background-color: rgb(35, 35, 35);
+    height: fit-content;
+    align-self: center;
 }
 
 form {
