@@ -28,9 +28,8 @@ function addMission( originInputCityValue,
                      endDateInputValue ){
 
 
-
     pendingText.textContent = "";
-    const row = document.createElement("tr")
+    const row = document.createElement("tr");
     
     let index = document.createElement("td");
     const originCity = document.createElement("td");
@@ -43,6 +42,7 @@ function addMission( originInputCityValue,
     const description = document.createElement("td");
     const startDate = document.createElement("td");
     const endDate = document.createElement("td");
+    const actions = document.createElement("td");
 
     index.textContent             = ++missionCount;
     originCity.textContent        = originInputCityValue;
@@ -68,6 +68,17 @@ function addMission( originInputCityValue,
     row.appendChild(startDate);
     row.appendChild(endDate);
 
+    const deleteBtn = document.createElement("button");
+    const markAsCompletedBtn = document.createElement("button");
+    
+    deleteBtn.textContent = "Elimina";
+    markAsCompletedBtn.textContent = "Completada";
+    
+    actions.appendChild(markAsCompletedBtn);
+    actions.appendChild(deleteBtn);
+
+    row.appendChild(actions);
+    
     table.appendChild(row)
 }
 
