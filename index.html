@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>MMO Missions</h1>
+    <h1>Missions MMO</h1>
 
     <main>
 
@@ -34,20 +34,35 @@
                     <option>Armadura</option>
                 </select>
 
-                <textarea placeholder="Descripció" maxlength="250"></textarea>
                 <input name ="min-level" class="input" type="number" placeholder="Nivell mínim" min="0">
+                <textarea placeholder="Descripció" maxlength="250"></textarea>
 
                 <input class="input" name="start-date" type="date">
                 <input class="input" name="end-date" type="date">
 
-                <button>Add Mission</button>
+                <button>Afegir missió</button>
 
             </form>
         </div>
         
         <div>
-            <ol></ol>
-            <p>No missions pending...</p>
+            <h2>Missions</h2>
+            <table>
+                <tr>
+                    <th>Missió</th>
+                    <th>Ciutat Origen</th>
+                    <th>Ciutat destí</th>
+                    <th>Experiència</th>
+                    <th>Or</th>
+                    <th>Persona destí</th>
+                    <th>Objecte</th>
+                    <th>Nivell mínim</th>
+                    <th>Descripció</th>
+                    <th>Data començament</th>
+                    <th>Data fi</th>
+                </tr>
+            </table>
+            <p>No hi ha missions pendents...</p>
         </div>
     </main>
 

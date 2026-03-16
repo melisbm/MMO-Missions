@@ -1,3 +1,4 @@
+const table = document.querySelector("table");
 const originCityInput = document.querySelector('input[name="origin-city"]');
 const destinationCityInput = document.querySelector('input[name="destination-city"]');
 const xpInput = document.querySelector('input[name="xp"]');
@@ -9,49 +10,29 @@ const minLevelInput = document.querySelector('input[name="min-level"]');
 const startDateInput = document.querySelector('input[name="start-date"]');
 const endDateInput = document.querySelector('input[name="end-date"]');
 
+const pendingText = document.querySelector('p');
+
+let missionCount = 0;
+
 const missionList = document.querySelector("ol");
 
-function addMission(originInputCityValue,
-                    destinationInputCityValue,
-                    xpInputValue,
-                    goldInputValue,
-                    destinationPersonInputValue,
-                    objectsInputValue,
-                    minLevelInputValue,
-                    descriptionInputValue,
-                    startDateInputValue,
-                    endDateInputValue,
-                    missionList){
+function addMission( originInputCityValue,
+                     destinationInputCityValue,
+                     xpInputValue,
+                     goldInputValue,
+                     destinationPersonInputValue,
+                     objectsInputValue,
+                     minLevelInputValue,
+                     descriptionInputValue,
+                     startDateInputValue,
+                     endDateInputValue ){
 
-    const listItem = document.createElement("li");
-    const listTable = document.createElement("table");
 
-    const header = document.createElement("tr")
 
-    const originCityHeader = document.createElement("th");
-    const destinationCityHeader = document.createElement("th");
-    const xpHeader = document.createElement("th");
-    const goldHeader = document.createElement("th");
-    const destinationPersonHeader = document.createElement("th");
-    const objectHeader = document.createElement("th");
-    const minLevelHeader = document.createElement("th");
-    const descriptiontHeader = document.createElement("th");
-    const startDateHeader = document.createElement("th");
-    const endDateHeader = document.createElement("th");
-
-    originCityHeader.textContent        = "Ciutat origen";
-    destinationCityHeader.textContent   = "Ciutat destí";
-    xpHeader.textContent                = "Experiència";
-    goldHeader.textContent              = "Or";
-    destinationPersonHeader.textContent = "Persona destí";
-    objectHeader.textContent            = "Objecte";
-    minLevelHeader.textContent          = "Nivell mínim";
-    descriptiontHeader.textContent      = "Descripció";
-    startDateHeader.textContent         = "Data començament";
-    endDateHeader.textContent           = "Date fi";
-
+    pendingText.textContent = "";
     const row = document.createElement("tr")
     
+    let index = document.createElement("td");
     const originCity = document.createElement("td");
     const destinationCity = document.createElement("td");
     const xp = document.createElement("td");
@@ -63,6 +44,7 @@ function addMission(originInputCityValue,
     const startDate = document.createElement("td");
     const endDate = document.createElement("td");
 
+    index.textContent             = ++missionCount;
     originCity.textContent        = originInputCityValue;
     destinationCity.textContent   = destinationInputCityValue;
     xp.textContent                = xpInputValue;
@@ -74,17 +56,7 @@ function addMission(originInputCityValue,
     startDate.textContent         = startDateInputValue;
     endDate.textContent           = endDateInputValue;
     
-    header.appendChild(originCityHeader);
-    header.appendChild(destinationCityHeader);
-    header.appendChild(xpHeader);
-    header.appendChild(goldHeader);
-    header.appendChild(destinationPersonHeader);
-    header.appendChild(objectHeader);
-    header.appendChild(minLevelHeader);
-    header.appendChild(descriptiontHeader);
-    header.appendChild(startDateHeader);
-    header.appendChild(endDateHeader);
-
+    row.appendChild(index);
     row.appendChild(originCity);
     row.appendChild(destinationCity);
     row.appendChild(xp);
@@ -96,11 +68,7 @@ function addMission(originInputCityValue,
     row.appendChild(startDate);
     row.appendChild(endDate);
 
-    listTable.appendChild(header);
-    listTable.appendChild(row);
-
-    listItem.appendChild(listTable);
-    missionList.appendChild(listItem)
+    table.appendChild(row)
 }
 
 
@@ -120,3 +88,4 @@ document.querySelector("form").addEventListener("submit", function(event){
                 endDateInput.value,
                 missionList );
 });
+
