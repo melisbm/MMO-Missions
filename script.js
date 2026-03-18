@@ -69,11 +69,16 @@ function addMission( originInputCityValue,
     row.appendChild(endDate);
 
     const deleteBtn = document.createElement("button");
-    const markAsCompletedBtn = document.createElement("button");
+
+    const markAsCompletedBtn = document.createElement("button");;
     
-    deleteBtn.textContent = "Elimina";
-    markAsCompletedBtn.textContent = "Completada";
+    deleteBtn.textContent = "E";
+    markAsCompletedBtn.textContent = "C";
     
+    deleteBtn.addEventListener("click", function() {
+        row.remove();
+    });
+
     actions.appendChild(markAsCompletedBtn);
     actions.appendChild(deleteBtn);
 
@@ -99,4 +104,3 @@ document.querySelector("form").addEventListener("submit", function(event){
                 endDateInput.value,
                 missionList );
 });
-
